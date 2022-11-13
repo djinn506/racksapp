@@ -1,26 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RackListComponent } from './rack-list/rack-list.component';
+import { StackListComponent } from './stack-list/stack-list.component';
 import { ServerListComponent } from './server-list/server-list.component';
-import { RacksComponent } from './racks/racks.component';
+import { StacksComponent } from './stacks/stacks.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RackListComponent,
+    StackListComponent,
     ServerListComponent,
-    RacksComponent,
+    StacksComponent,
     AboutUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

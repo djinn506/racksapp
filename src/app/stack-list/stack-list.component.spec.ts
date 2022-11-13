@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RacksComponent } from './racks.component';
+import { StackListComponent } from './stack-list.component';
 
-describe('RacksComponent', () => {
-  let component: RacksComponent;
-  let fixture: ComponentFixture<RacksComponent>;
+describe('StackListComponent', () => {
+  let component: StackListComponent;
+  let fixture: ComponentFixture<StackListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RacksComponent ]
+      declarations: [ StackListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RacksComponent);
+    fixture = TestBed.createComponent(StackListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

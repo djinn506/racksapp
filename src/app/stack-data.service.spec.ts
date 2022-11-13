@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RackDataService } from './rack-data.service';
+import { StackDataService } from './stack-data.service';
 
-describe('RackDataService', () => {
-  let service: RackDataService;
+describe('StackDataService', () => {
+  let service: StackDataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RackDataService);
+    service = TestBed.inject(StackDataService);
   });
 
   it('should be created', () => {
