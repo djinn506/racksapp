@@ -13,6 +13,8 @@ export class RackListComponent implements OnInit {
     brand : "NVIDIA",
     model: "3060",
     type : "gpu",
+    stock: 10,
+    quantity: 0,
     image: "assets/NVDIA3060.jpg",
     fail: false,
   },
@@ -20,6 +22,8 @@ export class RackListComponent implements OnInit {
     brand : "AMD",
     model: "5700 XT",
     type : "gpu",
+    quantity: 0,
+    stock: 5,
     image: "assets/AMD5700XT.jpeg",
     fail: true,
   },
@@ -27,8 +31,10 @@ export class RackListComponent implements OnInit {
     brand : "Kingston",
     model: "Fury 8Gb DDR4",
     type : "ram",
-    image: "assets/KingstonFury8Gb.jpeg",
+    quantity: 0,
+    stock: 8,
     fail: false,
+    image: "assets/KingstonFury8Gb.jpeg",
   },
 ]
 
@@ -37,4 +43,26 @@ export class RackListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upQuantity(rack: Rack): void{
+    if(rack.quantity < rack.stock){
+      rack.quantity ++;
+    }
+  }
+
+  downQuantity(rack: Rack): void{
+    if(rack.quantity > 0){
+    rack.quantity --;
+    }
+  }
+
+  verifyRackQuantity(rack: Rack): void{
+    if(rack.quantity > rack.stock){
+      alert("No se puede pedir mas de los componentes que hay en stock");
+      rack.quantity=rack.stock
+    }
+    if(rack.quantity < 0){
+    alert("No se puede pedir menos de 0 componentes");
+    rack.quantity=0;
+    }
+}
 }

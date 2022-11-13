@@ -5,16 +5,26 @@
         <th scope="col">Marca</th>
         <th scope="col">Modelo</th>
         <th scope="col">Tipo</th>
+        <th scope="col">Stock</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let rack of racks" [ngClass]="{'fail': rack.fail}">
-        <td *ngIf="rack.image"><img class="img-thumbnail" [src]="rack.image" width="64px" height="64px" [alt]="rack.brand+rack.model"></td>
-        <td *ngIf="rack.image">{{rack.brand}}</td>
-        <td *ngIf="rack.image">{{rack.model}}</td>
-        <td *ngIf="rack.image">{{rack.type}}</td>
-        
-      </tr>
-      
+      <ng-container *ngFor="let rack of racks">
+        <tr *ngIf="rack.image" [ngClass]="{'fail': rack.fail}">
+          <td><img class="img-thumbnail" [src]="rack.image" width="64px" height="64px" [alt]="rack.brand+rack.model"></td>
+          <td>{{rack.brand}}</td>
+          <td>{{rack.model}}</td>
+          <td>{{rack.type}}</td>
+          <td>{{rack.stock}}</td>
+          <td>
+            <div class="input-group input-group-sm mb-3">
+              <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(rack)">-</button>
+              <input class="form-control form-control-sm" type="number" [(ngModel)]="rack.quantity" (focusout)="verifyRackQuantity(rack)" />
+              <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(rack)">+</button>
+            </div>
+          </td>
+          
+        </tr>
+      </ng-container>
     </tbody>
   </table>
