@@ -64,5 +64,6 @@ export class RackListComponent implements OnInit {
     alert("No se puede pedir menos de 0 componentes");
     rack.quantity=0;
     }
-}
+  }
+  
 }

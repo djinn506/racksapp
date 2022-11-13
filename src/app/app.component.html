@@ -10,13 +10,13 @@
             <div class="" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">About</a>
+                  <a class="nav-link active" aria-current="page" [routerLink]="['/racks']">Racks</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Stuff</a>
+                  <a class="nav-link active" aria-current="page" [routerLink]="['/about']">About</a>
                 </li>
               </ul>
             </div>
@@ -25,13 +25,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-8">
-        <rack-list></rack-list>
-      </div>
-      <div class="col-4">
-        <server-list></server-list>
-      </div>
-      
+      <router-outlet></router-outlet>
+      <!-- <racks></racks> -->
+      <!-- <about-us></about-us> -->
     </div>
     <div class="row" >
       <div class="col-12">
