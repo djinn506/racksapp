@@ -1,0 +1,31 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img [src]="rack.image" width="100px" height="100px" [alt]="rack.brand+rack.model"></td>
+        <td>{{rack.brand}}</td>
+        <td>{{rack.model}}</td>
+        <td>{{rack.type}}</td>
+
+      </tr>
+      <tr>
+        <td><img [src]="rack.image" width="100px" height="100px" [alt]="rack.brand+rack.model"></td>
+        <td>KINGSTON</td>
+        <td>1Tb Dark</td>
+        <td>ram</td>
+      </tr>
+      <tr>
+        <td><img [src]="rack.image" width="100px" height="100px" [alt]="rack.brand+rack.model"></td>
+        <td>AMD</td>
+        <td>5700</td>
+        <td>gpu</td>
+      </tr>
+    </tbody>
+  </table>
