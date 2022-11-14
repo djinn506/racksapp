@@ -10,9 +10,10 @@
     </thead>
     <tbody>
       <ng-container *ngFor="let stack of stacks">
-        <tr *ngIf="stack.image" [ngClass]="{'fail': stack.fail}">
+        <!-- <tr *ngIf="stack.image" [ngClass]="{'fail': stack.fail}"> -->
+          <tr>
           <!-- <tr *ngIf="stack.image"> -->
-          <td><img class="img-thumbnail" [src]="stack.image" width="64px" height="64px" [alt]="stack.brand+stack.model"></td>
+          <!-- <td><img class="img-thumbnail" [src]="stack.image" width="64px" height="64px" [alt]="stack.brand+stack.model"></td> -->
           <td>{{stack.brand}}</td>
           <td>{{stack.model}}</td>
           <td>{{stack.type}}</td>

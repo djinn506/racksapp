@@ -22,7 +22,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

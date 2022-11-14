@@ -13,6 +13,6 @@ export class StackDataService {
 
    getAll(): Observable<Stack[]> {
 
-    return this.http.get<Stack[]>(URL);
+    return this.http.get<Stack[]>('http://localhost:3000/stacks');
   }
 }

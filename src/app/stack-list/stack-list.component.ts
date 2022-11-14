@@ -10,10 +10,9 @@ import { Stack } from './stack';
 })
 export class StackListComponent implements OnInit {
 
-  stacks : Stack[] =
-  /* [] */
+  stacks : Stack[] = []
   
-  [{
+  /* [{
     brand : "NVIDIA",
     model: "3060",
     type : "gpu",
@@ -40,16 +39,19 @@ export class StackListComponent implements OnInit {
     fail: false,
     image: "assets/KingstonFury8Gb.jpeg",
   },
-]
+] */
 
   constructor(
-    /* private stacksDataService: StackDataService */
+    private stacksDataService: StackDataService
     ) { }
+  
+  ngOnInit(): void {
+    this.stacksDataService.getAll().subscribe( stacks => {
+      /* console.log(stacks); */
+      return this.stacks = stacks;
+    } );
+  }  
 
-   ngOnInit(): void {
-  /*  this.stacksDataService.getAll().subscribe( stacks => this.stacks = stacks);*/
-  }
- 
   upQuantity(stack: Stack): void{
     if(stack.quantity < stack.stock){
       stack.quantity ++;
