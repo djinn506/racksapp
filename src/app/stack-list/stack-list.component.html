@@ -13,11 +13,12 @@
         <!-- <tr *ngIf="stack.image" [ngClass]="{'fail': stack.fail}"> -->
           <tr>
           <!-- <tr *ngIf="stack.image"> -->
-          <!-- <td><img class="img-thumbnail" [src]="stack.image" width="64px" height="64px" [alt]="stack.brand+stack.model"></td> -->
+          <td><img class="img-thumbnail" [src]="stack.image" width="64px" height="64px" [alt]="stack.brand+stack.model"></td>
           <td>{{stack.brand}}</td>
           <td>{{stack.model}}</td>
           <td>{{stack.type}}</td>
           <td>{{stack.stock}}</td>
+          
           <td>
             <div class="input-group input-group-sm mb-3">
               <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(stack)">-</button>
