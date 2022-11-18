@@ -1,17 +1,18 @@
 <table class="table table-striped table-hover">
     <thead>
       <tr>
-        <th scope="col"></th>
+        <th scope="col">image</th>
         <th scope="col">Brand</th>
         <th scope="col">Model</th>
         <th scope="col">Type</th>
         <th scope="col">Stock</th>
+        <th scope="col">quantity</th>
       </tr>
     </thead>
     <tbody>
       <ng-container *ngFor="let stack of stacks">
         <!-- <tr *ngIf="stack.image" [ngClass]="{'fail': stack.fail}"> -->
-          <tr>
+        <tr>
           <!-- <tr *ngIf="stack.image"> -->
           <td><img class="img-thumbnail" [src]="stack.image" width="64px" height="64px" [alt]="stack.brand+stack.model"></td>
           <td>{{stack.brand}}</td>
@@ -20,14 +21,12 @@
           <td>{{stack.stock}}</td>
           
           <td>
-            <div class="input-group input-group-sm mb-3">
+            <div class="input-group input-group-sm">
               <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(stack)">-</button>
               <input class="form-control form-control-sm" type="number" [(ngModel)]="stack.quantity" (focusout)="verifyStackQuantity(stack)" />
-              <!-- <input class="form-control form-control-sm" type="number" (focusout)="verifyStackQuantity(stack)" /> -->
               <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(stack)">+</button>
             </div>
           </td>
-          
         </tr>
       </ng-container>
     </tbody>
