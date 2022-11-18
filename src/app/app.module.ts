@@ -10,13 +10,15 @@ import { ServerListComponent } from './server-list/server-list.component';
 import { StacksComponent } from './stacks/stacks.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     StackListComponent,
     ServerListComponent,
     StacksComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    
   ],
   imports: [
     BrowserModule,

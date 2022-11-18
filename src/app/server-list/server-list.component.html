@@ -8,23 +8,13 @@
       </tr>
     </thead>
     <tbody>
+      <ng-container *ngFor="let server of servers">
       <tr>
         <td>{{server.brand}}</td>
         <td>{{server.model}}</td>
-        <td>{{server.gpu}}</td>
-        <td>{{server.mem}}</td>
+        <td>{{server.comp}}</td>
+        <td>{{server.comp2}}</td>
       </tr>
-      <tr>
-        <td>Mikrotik</td>
-        <td>1560</td>
-        <td>gpuid22</td>
-        <td>memid43</td>
-      </tr>
-      <tr>
-        <td>Stack3</td>
-        <td>48912</td>
-        <td>gpuid65</td>
-        <td>memid23</td>
-      </tr>
+    </ng-container>
     </tbody>
   </table>
