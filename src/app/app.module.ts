@@ -9,6 +9,7 @@ import { StackListComponent } from './stack-list/stack-list.component';
 import { ServerListComponent } from './server-list/server-list.component';
 import { StacksComponent } from './stacks/stacks.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     ServerListComponent,
     StacksComponent,
     AboutUsComponent,
+    HomeComponent,
     
   ],
   imports: [

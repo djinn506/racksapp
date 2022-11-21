@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerDataService } from '../server-data.service';
+import { Stack } from '../stack-list/stack';
 
 import { Server } from './server';
 
@@ -29,6 +30,11 @@ export class ServerListComponent implements OnInit {
       return this.servers = servers;
     });
   }
-
+ 
+  getBrand(stack: Stack): string{
+    
+    return stack.brand;
+    
+  }
 
 }
