@@ -10,6 +10,8 @@ import { ServerListComponent } from './server-list/server-list.component';
 import { StacksComponent } from './stacks/stacks.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
+import { CreateComponent } from './create/create.component';
+import { UpdateComponent } from './update/update.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { HomeComponent } from './home/home.component';
     StacksComponent,
     AboutUsComponent,
     HomeComponent,
+    CreateComponent,
+    UpdateComponent,
     
   ],
   imports: [

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { StacksComponent } from './stacks/stacks.component';
 import { HomeComponent } from './home/home.component';
+import { CreateComponent } from './create/create.component';
+import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
   /* { path: '',redirectTo: 'stacks',pathMatch: 'full' }, */
@@ -10,6 +12,8 @@ const routes: Routes = [
   { path: 'stacks', component: StacksComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'create', component: CreateComponent },
+  { path: 'update', component: UpdateComponent },
 ];
 
 @NgModule({

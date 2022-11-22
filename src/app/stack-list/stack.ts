@@ -1,3 +1,5 @@
+import { Server } from "../server-list/server";
+
 export interface Stack {
     brand : string,
     model: string,
@@ -6,4 +8,6 @@ export interface Stack {
     quantity: number,
     image : string,
     fail : boolean,
+    order: Server,
+    order1: Server,
     }

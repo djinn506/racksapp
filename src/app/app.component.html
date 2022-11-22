@@ -1,7 +1,7 @@
 <div class="container">
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary" aria-label="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="['/home']"><img src="assets/logo.png" width="60" height="60"></a>
+      <a class="navbar-brand" [routerLink]="['/home']"><img src="assets/logo01.jpg" width="60" height="60"></a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -17,8 +17,8 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Components</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Create</a></li>
-              <li><a class="dropdown-item" href="#">Update</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/create']">Create</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/update']">Update</a></li>
               <li><a class="dropdown-item" href="#">Remove</a></li>
             </ul>
           </li>
@@ -41,15 +41,15 @@
       <!-- <stacks></stacks> -->
       <!-- <about-us></about-us> -->
       </div>
-      <div class="container" >
-    <div class="footer navbar navbar-expand-lg navbar-dark bd-navbar border-top" >
+      <div class="container  " >
+    <div class="footer navbar navbar-expand-lg navbar-dark bd-navbar border-top bg-primary" >
       <div class="container-xxl bd-gutter flex-wrap flex-lg-nowrap row ">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 bg-dark">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
           <div class="col-md-4 d-flex align-items-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <img src="assets/logo.png" width="60" height="60">
+              <img src="assets/logo01.jpg" width="40" height="40">
             </a>
-            <span class="mb-3 mb-md-0 text-muted">© {{year}} Company, Inc</span>
+            <span class="mb-3 mb-md-0 text-muted">Racks © {{year}} Company, Inc</span>
           </div>
       
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
