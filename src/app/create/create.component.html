@@ -3,27 +3,32 @@
     <h2><b>Components</b></h2>
   
 </div>
-<div class="container">
+<div class="container col-12" id="createform">
 <!-- <form action="/action_page.php"> -->
     <p></p>
     <form class="">
     
-    <label for="fname">Brand: </label>
-    <input type="text" id="brandname" name="brandname"><br><br>
+    <div class="mb-3">
+        <label for="fname">Brand: </label>
+        <input type="text" id="brandname" name="brandname" [(ngModel)]="stack.brand"><br><br>
+    </div>
+    <div class="mb-3">
+        <label for="lname">Model: </label>
+        <input type="text" id="modelname" name="modelname" [(ngModel)]="stack.model"><br><br>
+    </div>    
+    <div class="mb-3">
+        <label for="fname">Image: </label>
+        <input type="url" id="imageurl" name="imageurl" [(ngModel)]="stack.image"><br><br>
+    </div>
+    <div class="mb-3">
+        <label for="lname">Stock: </label>
+        <input type="number" id="stock" name="stock" [(ngModel)]="stack.stock"><br><br>
+    </div>
+    <!-- <label for="lname">Active: </label>
+    <input type="checkbox" id="isActive" name="isActive"><br><br> -->
     
-    <label for="lname">Model: </label>
-    <input type="text" id="modelname" name="modelname"><br><br>
     
-    <label for="fname">Image: </label>
-    <input type="url" id="imageurl" name="imageurl"><br><br>
-
-    <label for="lname">Stock: </label>
-    <input type="number" id="stock" name="stock"><br><br>
-
-    <label for="lname">Active: </label>
-    <input type="checkbox" id="isActive" name="isActive"><br><br>
-    
-    <input type="submit" value="Create">
+    <button type="submit" class="btn btn-primary" (click)="createStack()">Create</button>
 
   </form> 
   <p></p>

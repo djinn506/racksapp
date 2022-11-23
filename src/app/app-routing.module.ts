@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'stacks', component: StacksComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'create', component: CreateComponent },
-  { path: 'update', component: UpdateComponent },
+  { path: 'stacks/new', component: CreateComponent },
+  { path: 'stacks/update', component: UpdateComponent },
 ];
 
 @NgModule({

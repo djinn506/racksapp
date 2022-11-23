@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ServerDataService } from '../server-data.service';
 import { Stack } from '../stack-list/stack';
-
 import { Server } from './server';
 
 @Component({
@@ -12,14 +12,6 @@ import { Server } from './server';
 export class ServerListComponent implements OnInit {
 
   servers : Server[] = []
-
-/* 
-  server = {
-    brand : "SUPERMICRO",
-    model: "8888",
-    gpu: "gpuID11",
-    mem: "ramID12"
-  } */
 
   constructor(
     private serversDataService: ServerDataService
@@ -32,9 +24,7 @@ export class ServerListComponent implements OnInit {
   }
  
   getBrand(stack: Stack): string{
-    
     return stack.brand;
-    
   }
 
 }
