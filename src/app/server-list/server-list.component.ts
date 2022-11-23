@@ -11,7 +11,7 @@ import { Server } from './server';
 })
 export class ServerListComponent implements OnInit {
 
-  servers : Server[] = []
+  servers : Server[] = [];
 
   constructor(
     private serversDataService: ServerDataService

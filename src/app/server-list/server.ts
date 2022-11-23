@@ -1,8 +1,9 @@
-import { Stack } from "../stack-list/stack";
+/* import { Stack } from "../stack-list/stack"; */
 
 export interface Server {
+    id: number,
     brand : string,
     model: string,
-    stack: Stack,
-    stack1: Stack,
+    /* stack: Stack,
+    stack1: Stack, */
     }
