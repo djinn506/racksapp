@@ -1,5 +1,5 @@
 <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="/assets/logo01.jpg" alt="" width="200" height="200">
+    <img class="d-block mx-auto mb-4" src="/assets/logo01.png" alt="" width="200" height="200" alt="logo">
     <h1 class="display-5 fw-bold">RACKS</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">
@@ -7,8 +7,8 @@
         Free of charge until you buy.
       </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Manage Rack</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Buy Rack</button>
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" [routerLink]="['/stacks']">Manage Rack</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4" [routerLink]="['/create']">Create Component</button>
       </div>
     </div>
   </div>
@@ -17,21 +17,21 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text></svg>
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/assets/switches.jpeg" alt="racks-image">
 
         <h2 class="fw-normal">Racks</h2>
         <p>The main %$#%$# of your server room. This mainframe will connect all your components so choose carefully!</p>
         <p><a class="btn btn-secondary" href="#">View details »</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text></svg>
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/assets/gpu.jpeg" alt="gpu-image">
 
         <h2 class="fw-normal">GPUs</h2>
         <p>Fan of Loud noises or Crypto-Mining? Look no further and pick the most CUDA cores that goes BRRR..</p>
         <p><a class="btn btn-secondary" href="#">View details »</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text></svg>
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/assets/ram.jpeg" alt="ram-image">
 
         <h2 class="fw-normal">RAMs</h2>
         <p>to ECC or not to ECC? Are you making a server for compiling or general use? Make sure you're thinking for the future where the demands will be higher.</p>
@@ -55,7 +55,7 @@
             <small class="text-muted"></small>
           </div>
           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Price: 15623</small>
+          <small class="text-muted">Price: 15623 AR$</small>
         </a>
       </div>
       
@@ -66,7 +66,7 @@
             <small>14 hours ago</small>
           </div>
           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>rating: 15623</small>
+          <small>rating: 150623</small>
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -74,7 +74,7 @@
             <small class="text-muted"></small>
           </div>
           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Price: 15623</small>
+          <small class="text-muted">Price: 150623 AR$</small>
         </a>
       </div>
       <div class="list-group col-4">
@@ -84,7 +84,7 @@
             <small>1 day ago</small>
           </div>
           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>rating: 15623</small>
+          <small>rating: 5623 </small>
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -92,7 +92,7 @@
             <small class="text-muted"></small>
           </div>
           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Price: 15623</small>
+          <small class="text-muted">Price: 5623 AR$</small>
         </a>
       </div>
     </div>
