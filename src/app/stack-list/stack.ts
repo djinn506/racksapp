@@ -9,6 +9,6 @@ export interface Stack {
     quantity: number,
     image : string,
     fail : boolean,
-    order: Server,
-    order1: Server,
+    isActive : boolean,
+    order: Server
     }
