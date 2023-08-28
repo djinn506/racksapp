@@ -35,7 +35,7 @@ export class CreateComponent implements OnInit {
 
   createStack(){
     console.log(this.stack);
-    this.stacksDataService.createStack({ stack: this.stack }).subscribe(data => this.router.navigate(['/stacks']));
+    this.stacksDataService.createStack(this.stack).subscribe(data => this.router.navigate(['/stacks']));
     } ;
     
     /*this.stacksDataService.createStack({ model: this.model }).subscribe(this.model = Stack );*/
