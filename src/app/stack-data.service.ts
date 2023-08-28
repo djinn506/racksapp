@@ -20,7 +20,7 @@ export class StackDataService {
   getAll(): Observable<Stack[]> {
     return this.http.get<Stack[]>(URL);
   }
-createStack(stack :any): Observable<Stack> {
+  createStack(stack :any): Observable<Stack> {
     return this.http.post<Stack>(URL, stack, this.httpOptions);
   }
 /*  createStack(stack :stack): Observable<Stack> {

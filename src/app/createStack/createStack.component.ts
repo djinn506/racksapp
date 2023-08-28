@@ -21,13 +21,7 @@ export class CreateComponent implements OnInit {
     brand: "NVIDIA",
     model: "rtx 9999",
     type: "GPU"}
-/*
-  stack: Stack = [
-    brand: "NVIDIA",
-    model: "rtx 9999",
-    type: "GPU"
-  ]
-  */
+
   servers : Server[] = [];
 
   constructor( private stacksDataService: StackDataService, private router: Router, private serversDataService: ServerDataService
@@ -40,7 +34,6 @@ export class CreateComponent implements OnInit {
   }
 
   createStack(){
-    console.log(this.stack);
     console.log(this.stack);
     this.stacksDataService.createStack({ stack: this.stack }).subscribe(data => this.router.navigate(['/stacks']));
     } ;
