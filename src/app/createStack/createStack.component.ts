@@ -15,17 +15,20 @@ import { Stack } from './stack'; /* local class definition
 export class CreateComponent implements OnInit {
   /*order: Server[] = []
   orders: Server[] = []
-  */  
+  */
 
-  stack: Stack = {
-    brand: "brand",
-    model: "model",
-    type: "type",
-  }
+  stack : Stack = {
+    brand: "NVIDIA",
+    model: "rtx 9999",
+    type: "GPU"}
+/*
+  stack: Stack = [
+    brand: "NVIDIA",
+    model: "rtx 9999",
+    type: "GPU"
+  ]
+  */
   servers : Server[] = [];
-
-
-  
 
   constructor( private stacksDataService: StackDataService, private router: Router, private serversDataService: ServerDataService
     ) { }
@@ -38,8 +41,12 @@ export class CreateComponent implements OnInit {
 
   createStack(){
     console.log(this.stack);
+    console.log(this.stack);
     this.stacksDataService.createStack({ stack: this.stack }).subscribe(data => this.router.navigate(['/stacks']));
-  }
+    } ;
+    
+    /*this.stacksDataService.createStack({ model: this.model }).subscribe(this.model = Stack );*/
+  
   
 /*
   createStack(){
