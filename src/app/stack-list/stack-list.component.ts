@@ -12,19 +12,16 @@ import { Stack } from './stack';
 export class StackListComponent implements OnInit {
 
   stacks: Stack[] = []
-  order: Server[]=[]
-  orders: Server[]=[]
-
+  
   constructor(
     private stacksDataService: StackDataService
     ) { }
   
   ngOnInit(): void {
     this.stacksDataService.getAll().subscribe( stacks => {
-      console.log(stacks);
+      /*console.log(stacks);*/
       return this.stacks = stacks;
     } );
-    
   }  
 
   upQuantity(stack: Stack): void{

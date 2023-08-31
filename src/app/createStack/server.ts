@@ -1,8 +1,9 @@
 
 export class Server {
         constructor(
-        public brand: string,
-        public model: string,
+            public id: number,
+            public brand?: string,
+            public model?: string,
     /* stack: Stack,
     stack1: Stack, */
     ){}

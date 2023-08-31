@@ -19,12 +19,13 @@ export class ServerListComponent implements OnInit {
 
   ngOnInit(): void {
     this.serversDataService.getAll().subscribe( servers => {
+      console.log(servers);
       return this.servers = servers;
     });
   }
  
-  getBrand(stack: Stack): string{
-    return stack.brand;
+  getModel(stack: Stack): string{
+    return stack.model;
   }
 
 }

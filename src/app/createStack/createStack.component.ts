@@ -26,11 +26,13 @@ export class CreateComponent implements OnInit {
     image: "",
     fail: false,
     isActive: false,
-  /*  order: {
-      brand: "",
-      model: "",
-    }*/
+    order: {
+      id:1,  
+      
+    }
   }
+
+  selected:number=1;
 
   constructor( private stacksDataService: StackDataService, private router: Router, private orderDataService: ServerDataService
     ) { }
@@ -45,7 +47,12 @@ export class CreateComponent implements OnInit {
     console.log(this.stack);
     this.stacksDataService.createStack(this.stack).subscribe(data => this.router.navigate(['/stacks']));
     } ;
-    
+  
+    /*
+    onChangeSelection(selected){
+      this.stack.order.id=parseInt(selected);
+    }
+
     /*this.stacksDataService.createStack({ model: this.model }).subscribe(this.model = Stack );*/
 /*
   createStack(){

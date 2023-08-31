@@ -11,6 +11,7 @@ export class Stack {
         public image : string,
         public fail : boolean,
         public isActive : boolean,
+        public order : Server,
         /*public order: Server*/
 ){
     }

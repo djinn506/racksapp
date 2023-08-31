@@ -22,6 +22,12 @@
         <td>{{server.stack1.brand}} {{server.stack1.model}}</td> -->
         <!-- <td><input class="form-control form-control-sm" type="number" [(ngModel)]="server.comp" (focusout)="getBrand(server)" /></td> -->
         <!-- <td>{{server.comp2}}</td> -->
+        <!--<td *ngIf="server.stack.type=='gpu'">-->
+        <td *ngFor="let stack of server.stack">{{stack.model}}</td>
+        <!--</td> -->
+
+        <!-- <td *ngFor="let order of stack.order">{{order.model}}</td> -->
+
       </tr>
     </ng-container>
     </tbody>
