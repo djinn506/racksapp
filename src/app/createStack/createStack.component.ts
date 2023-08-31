@@ -8,7 +8,7 @@ import { Stack } from './stack'; /* local class definition*/
 /*import { Stack } from '../stack-list/stack';*/
 
 @Component({
-  selector: 'create',
+  selector: 'create-stack',
   templateUrl: './createStack.component.html',
   styleUrls: ['./createStack.component.scss']
 })

@@ -1,0 +1,30 @@
+<div class="container border-bottom text-center">
+  
+    <h2><b>Components</b></h2>
+  
+</div>
+<div class="container col-12" id="createserverform">
+<!-- <form action="/action_page.php"> -->
+    <p></p>
+    <form class="">
+    
+    <div class="mb-3">
+        <label for="fname">Brand: </label>
+        <input type="text" id="brand" name="brand" [(ngModel)]="server.brand"><br><br>
+    </div>
+    <div class="mb-3">
+        <label for="lname">Model: </label>
+        <input type="text" id="model" name="model" [(ngModel)]="server.model"><br><br>
+    </div> 
+    <!--
+    <select class="form-select" aria-label="Default select example" name="server" [(ngModel)]="server.stack.id">
+        <option *ngFor="let order of orders" [ngValue]='stack.id'>{{order.brand}} {{order.model}}</option>
+      </select>
+    -->
+    
+
+    <button type="submit" class="btn btn-primary" (click)="createServer()">Create</button>
+
+  </form> 
+  <p></p>
+</div>

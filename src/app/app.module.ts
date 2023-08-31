@@ -12,6 +12,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './createStack/createStack.component';
 import { UpdateComponent } from './update/update.component';
+import { CreateServerComponent } from './create-server/create-server.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { UpdateComponent } from './update/update.component';
     HomeComponent,
     CreateComponent,
     UpdateComponent,
+    CreateServerComponent,
     
   ],
   imports: [
