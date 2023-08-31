@@ -10,5 +10,5 @@ export interface Stack {
     image : string,
     fail : boolean,
     isActive : boolean,
-    order: Server
+    order: any /*doesnt work when assigned to "Server" type */
     }
