@@ -12,6 +12,7 @@ import { Stack } from './stack';
 export class StackListComponent implements OnInit {
 
   stacks: Stack[] = []
+  server: Server[]=[];
   
   constructor(
     private stacksDataService: StackDataService
@@ -19,7 +20,7 @@ export class StackListComponent implements OnInit {
   
   ngOnInit(): void {
     this.stacksDataService.getAll().subscribe( stacks => {
-      /*console.log(stacks);*/
+      console.log(stacks);
       return this.stacks = stacks;
     } );
   }  

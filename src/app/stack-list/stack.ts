@@ -8,7 +8,6 @@ export interface Stack {
     stock: number,
     quantity: number,
     image : string,
-    fail : boolean,
     isActive : boolean,
-    order: any /*doesnt work when assigned to "Server" type */
+    server: any /*doesnt work when assigned to "Server" type */
     }

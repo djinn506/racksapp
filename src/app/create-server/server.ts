@@ -5,7 +5,7 @@ export class Server {
      /*   public id: number,*/
         public brand: string,
         public model: string,
-        public stack?: Stack,
+        /* public stack?: Stack, */
 /*stack1: Stack, */
 ){}
 }

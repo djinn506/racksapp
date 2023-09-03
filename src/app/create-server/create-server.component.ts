@@ -12,31 +12,31 @@ import { Stack } from './stack';
 })
 export class CreateServerComponent implements OnInit {
 
-  orders: Server[] = [];
+  servers: Server[] = [];
 
   stacks: Stack[] = [];
 
   server: Server = {
     brand: "SuperMega",
     model: "99",
-    
-    stack: {
-      id:99,
-    }
   }
-stack: any;
+/* stack: any; */
 
   constructor( private serversDataService: ServerDataService, private router: Router, private stacksDataService: StackDataService, 
   ) { }
 
   ngOnInit(): void {
-    this.serversDataService.getAll().subscribe( stacks => {
-      return this.stacks = stacks;
+    this.serversDataService.getAll().subscribe( servers => {
+      return this.stacks = servers;
     });
+
+    this.stacksDataService.getAll().subscribe( stacks => {
+      return this.stacks = stacks;
+    } );
   }
 
   createServer(){
-    console.log(this.orders);
+    console.log(this.servers);
     this.serversDataService.createServer(this.server).subscribe(data => this.router.navigate(['/stacks']));
     } ;
 }

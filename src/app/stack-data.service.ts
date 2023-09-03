@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Stack } from './stack-list/stack';
 
-const URL = "http://localhost:3000/stacks";
+const URL = "http://localhost:3000/component";
 @Injectable({
   providedIn: 'root'
 })

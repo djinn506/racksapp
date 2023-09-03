@@ -1,3 +1,4 @@
+<p></p>
 <div class="container border-bottom text-center">
   
     <h2><b>Components</b></h2>
@@ -26,12 +27,16 @@
         <input type="url" id="imageurl" name="imageurl" [(ngModel)]="stack.image"><br><br>
     </div>
     
-    
     <div class="mb-3">
         <label for="lname">Stock: </label>
         <input type="number" id="stock" name="stock" [(ngModel)]="stack.stock"><br><br>
     </div>
-    
+  
+    <div class="container mb-3">
+    <select class="form-select col-6" aria-label="Default select example" name="server" [(ngModel)]="stack.server.id">
+        <option *ngFor="let server of servers" [ngValue]='server.id'>{{server.brand}} {{server.model}}</option>
+      </select>
+    </div>
 
     <label for="lname">Active: </label>
     <input type="checkbox" id="isActive" name="isActive" [(ngModel)]="stack.isActive"><br><br>
@@ -40,11 +45,6 @@
         <option *ngFor="let order of orders" value="{{order.id}}">{{order.brand}} {{order.model}}</option>
       </select>
     -->
-
-    <select class="form-select" aria-label="Default select example" name="server" [(ngModel)]="stack.order.id">
-        <option *ngFor="let order of orders" [ngValue]='order.id'>{{order.brand}} {{order.model}}</option>
-      </select>
-
 
     <!--<td *ngFor="let order of stack.order">{{order.model}}{{order.brand}}</td>-->
 

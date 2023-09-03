@@ -14,7 +14,7 @@ import { Stack } from './stack'; /* local class definition*/
 })
 export class CreateComponent implements OnInit {
   
-  orders: Server[] = []
+  servers: Server[] = []
 
   stack : Stack = {
     brand: "NVIDIA",
@@ -23,10 +23,9 @@ export class CreateComponent implements OnInit {
   
     stock: 1,
     quantity: 0,
-    image: "",
-    fail: false,
+    image: "/assets/noimage.jpg",
     isActive: false,
-    order: {
+    server: {
       id:1,  
       
     }
@@ -38,8 +37,8 @@ export class CreateComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.orderDataService.getAll().subscribe( orders => {
-      return this.orders = orders;
+    this.orderDataService.getAll().subscribe( servers => {
+      return this.servers = servers;
     });
   }
 

@@ -10,7 +10,7 @@ import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
   /* { path: '',redirectTo: 'stacks',pathMatch: 'full' }, */
-  /* { path: '',redirectTo: 'home',pathMatch: 'full' },  Redirects to home if link broken*/
+  { path: '',redirectTo: 'home',pathMatch: 'full' },
   /*first-match wins, more specific routes should be placed above */
   { path: 'newserver', component: CreateServerComponent },
   { path: 'stacks/new', component: CreateComponent },

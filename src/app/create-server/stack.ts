@@ -10,7 +10,6 @@ export class Stack {
         public stock?: number,
         public quantity?: number,
         public image?: string,
-        public fail?: boolean,
         public isActive?: boolean,
         public order?: Server,
         /*public order: Server*/

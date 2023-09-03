@@ -1,6 +1,6 @@
 <div class="container border-bottom text-center">
   
-    <h2><b>Racks</b></h2>
+    <h2><b>Servers</b></h2>
   
 </div>
 <table class="table table-striped table-hover">
@@ -8,8 +8,9 @@
       <tr>
         <th scope="col">Brand</th>
         <th scope="col">Model</th>
-        <th scope="col">GPU</th>
-        <th scope="col">RAM</th>
+        <th scope="col">Component A</th>
+        <th scope="col">Component B</th>
+        <th scope="col">Component C</th>
       </tr>
     </thead>
     <tbody>
@@ -23,7 +24,7 @@
         <!-- <td><input class="form-control form-control-sm" type="number" [(ngModel)]="server.comp" (focusout)="getBrand(server)" /></td> -->
         <!-- <td>{{server.comp2}}</td> -->
         <!--<td *ngIf="server.stack.type=='gpu'">-->
-        <td *ngFor="let stack of server.stack">{{stack.model}}</td>
+        <td *ngFor="let stack of server.component">{{stack.brand}} {{stack.model}}</td>
         <!--</td> -->
 
         <!-- <td *ngFor="let order of stack.order">{{order.model}}</td> -->

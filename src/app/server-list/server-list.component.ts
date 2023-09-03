@@ -19,7 +19,7 @@ export class ServerListComponent implements OnInit {
 
   ngOnInit(): void {
     this.serversDataService.getAll().subscribe( servers => {
-      console.log(servers);
+      /* console.log(servers); */
       return this.servers = servers;
     });
   }

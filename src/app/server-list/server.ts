@@ -4,5 +4,5 @@ export interface Server {
     id: number,
     brand : string,
     model: string,
-    stack: any
+    component: any
     }
