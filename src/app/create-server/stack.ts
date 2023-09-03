@@ -11,8 +11,7 @@ export class Stack {
         public quantity?: number,
         public image?: string,
         public isActive?: boolean,
-        public order?: Server,
-        /*public order: Server*/
+        public server?: Server
 ){
     }
     }

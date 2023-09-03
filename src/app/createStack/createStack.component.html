@@ -41,12 +41,12 @@
     <label for="lname">Active: </label>
     <input type="checkbox" id="isActive" name="isActive" [(ngModel)]="stack.isActive"><br><br>
     <!--
-    <select class="form-select" aria-label="Default select example" name="server" [(ngModel)]="stack.order">
-        <option *ngFor="let order of orders" value="{{order.id}}">{{order.brand}} {{order.model}}</option>
+    <select class="form-select" aria-label="Default select example" name="server" [(ngModel)]="stack.server">
+        <option *ngFor="let server of servers" value="{{server.id}}">{{server.brand}} {{server.model}}</option>
       </select>
     -->
 
-    <!--<td *ngFor="let order of stack.order">{{order.model}}{{order.brand}}</td>-->
+    <!--<td *ngFor="let server of stack.server">{{server.model}}{{server.brand}}</td>-->
 
     <button type="submit" class="btn btn-primary" (click)="createStack()">Create</button>
 

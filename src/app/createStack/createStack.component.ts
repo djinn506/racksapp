@@ -33,11 +33,11 @@ export class CreateComponent implements OnInit {
 
   selected:number=1;
 
-  constructor( private stacksDataService: StackDataService, private router: Router, private orderDataService: ServerDataService
+  constructor( private stacksDataService: StackDataService, private router: Router, private serverDataService: ServerDataService
     ) { }
 
   ngOnInit(): void {
-    this.orderDataService.getAll().subscribe( servers => {
+    this.serverDataService.getAll().subscribe( servers => {
       return this.servers = servers;
     });
   }
@@ -49,7 +49,7 @@ export class CreateComponent implements OnInit {
   
     /*
     onChangeSelection(selected){
-      this.stack.order.id=parseInt(selected);
+      this.stack.server.id=parseInt(selected);
     }
 
     /*this.stacksDataService.createStack({ model: this.model }).subscribe(this.model = Stack );*/
