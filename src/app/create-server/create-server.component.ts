@@ -36,7 +36,7 @@ export class CreateServerComponent implements OnInit {
   }
 
   createServer(){
-    console.log(this.servers);
+    /* console.log(this.servers); */
     this.serversDataService.createServer(this.server).subscribe(data => this.router.navigate(['/stacks']));
     } ;
 }

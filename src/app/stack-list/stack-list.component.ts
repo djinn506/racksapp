@@ -20,7 +20,7 @@ export class StackListComponent implements OnInit {
   
   ngOnInit(): void {
     this.stacksDataService.getAll().subscribe( stacks => {
-      console.log(stacks);
+      /* console.log(stacks); */
       return this.stacks = stacks;
     } );
   }  
