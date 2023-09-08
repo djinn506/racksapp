@@ -1,0 +1,13 @@
+version: '3'
+services:
+  angular:
+    image: 'node:18-alpine'
+    volumes:
+      - '.:/opt'
+    ports:
+      - '4200:4200'
+    working_dir: /opt
+    command: ["npm","install"]
+#    command: ["npm","start"]
+    command: ["node_modules/.bin/ng","serve","--host","0.0.0.0"]
+#    entrypoint: './bin/start.sh'
