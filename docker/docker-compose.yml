@@ -1,0 +1,27 @@
+version: '3'
+services:
+  angular:
+    image: 'myapp:latest'
+    volumes:
+      - './racksapp:/app'
+    ports:
+      - '4200:4200'
+    command: ["./node_modules/.bin/ng", "serve", "--host", "0.0.0.0"]
+  nest:
+    image: 'server-api:latest'
+    volumes:
+      - './racks:/opt'
+    ports:
+      - '3000:3000'
+    command: ["npm", "run", "start"] ##works
+  postgres:
+    image: 'postgres:latest'
+    restart: 'no'
+    volumes:
+      - './racks/postgres:/var/lib/postgresql'
+    ports:
+      - '5432:5432'
+  adminer:
+    image: 'adminer:latest'
+    ports:
+      - '8080:8080'
