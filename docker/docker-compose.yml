@@ -6,14 +6,14 @@ services:
       - './racksapp:/app'
     ports:
       - '4200:4200'
-    command: ["./node_modules/.bin/ng", "serve", "--host", "0.0.0.0"]
+    command: ["./bin/start.sh"]
   nest:
     image: 'server-api:latest'
     volumes:
       - './racks:/opt'
     ports:
       - '3000:3000'
-    command: ["npm", "run", "start"] ##works
+    command: ["./bin/start.sh"]
   postgres:
     image: 'postgres:latest'
     restart: 'no'

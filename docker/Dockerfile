@@ -14,3 +14,5 @@ ENV DB_PASSWORD=secret123!
 
 EXPOSE 3000
 
+CMD ["./bin/start.sh"]
+
