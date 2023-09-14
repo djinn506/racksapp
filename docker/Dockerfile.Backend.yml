@@ -17,6 +17,7 @@ COPY ./racks .
 #ENV POSTGRES_DB=servers
 #ENV POSTGRES_PASSWORD=secret123!
 
+ENV DB_HOST=postgres
 ENV DB_USER=servers
 ENV DB_NAME=servers
 ENV DB_PASSWORD=secret123!
