@@ -1,5 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 npm install
-npm run build
-npm run start:dev
+node_modules/.bin/ng serve --host 0.0.0.0 --watch
