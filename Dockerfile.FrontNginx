@@ -1,0 +1,13 @@
+### STAGE 1: Build ###
+FROM node:18-alpine AS build
+WORKDIR /usr/local/app/
+COPY package.json package-lock.json /usr/local/app/
+RUN npm install
+COPY ./ /usr/local/app/
+RUN npm run build
+###CMD ["./bin/start.sh"]
+### STAGE 2: Run ###
+FROM nginx:1.17.1-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /usr/local/app/dist/sample-angular/app /usr/share/nginx/html
+EXPOSE 80
