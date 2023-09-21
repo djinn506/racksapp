@@ -1,5 +1,7 @@
 import { Server } from "../server-list/server";
 
+/* import { Server } from "./server"; */
+
 export interface Stack {
     id: number,
     brand : string,
@@ -9,5 +11,5 @@ export interface Stack {
     quantity: number,
     image : string,
     isActive : boolean,
-    server: any /*doesnt work when assigned to "Server" type */
+    server: Server /*doesnt work when assigned to "Server" type */
     }
