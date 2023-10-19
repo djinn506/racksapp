@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href stacksapp && echo '/* /stacksapp/index.html  200' > dist/_redirects/filehere ",
+    "build": "ng build --base-href stacksapp && echo '/* /stacksapp/index.html  200' > dist/_redirects ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
