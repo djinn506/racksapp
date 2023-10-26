@@ -38,7 +38,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Manage and Organize your Servers Here');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Break test');
   });
 
 });
