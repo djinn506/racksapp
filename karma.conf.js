@@ -42,7 +42,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     /* browsers: ['Firefox'], */
-    browsers: ['ChromeHeadlessCI'],
+    browsers: ['ChromeHeadlessCI', 'Firefox'],
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
