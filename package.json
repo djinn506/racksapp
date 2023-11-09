@@ -38,6 +38,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "puppeteer": "^21.4.1",
-    "typescript": "~4.7.2"
+    "typescript": "~4.8.4"
   }
 }
