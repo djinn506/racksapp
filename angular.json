@@ -54,6 +54,14 @@
               ],
               "outputHashing": "all"
             },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
             "k8s": {
               "budgets": [
                 {
@@ -70,18 +78,10 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/k8s.prod.ts"
+                  "with": "src/environments/environment.k8s.ts"
                 }
               ],
               "outputHashing": "all"
-            },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -95,6 +95,9 @@
             },
             "development": {
               "browserTarget": "stacksapp:build:development"
+            },
+            "k8s": {
+              "browserTarget": "stacksapp:build:k8s"
             }
           },
           "defaultConfiguration": "development"
