@@ -1,27 +1,33 @@
 version: '3'
 services:
   angular:
-    image: 'myapp:latest'
+    image: 'djinn506/racksfrontend:latest'
     volumes:
       - './racksapp:/app'
     ports:
       - '4200:4200'
-    command: ["./bin/start.sh"]
   nest:
-    image: 'server-api:latest'
+    image: 'djinn506/racksbackend:latest'
     volumes:
       - './racks:/opt'
     ports:
       - '3000:3000'
-    command: ["./bin/start.sh"]
   postgres:
     image: 'postgres:latest'
-    restart: 'no'
+    environment:
+      POSTGRES_PASSWORD: "secret123!"
+      POSTGRES_USER: servers
+      POSTGRES_DB: servers
     volumes:
-      - './racks/postgres:/var/lib/postgresql'
+      - 'psqldata:/var/lib/postgresql/data'
     ports:
       - '5432:5432'
   adminer:
-    image: 'adminer:latest'
+    command: php -S 0.0.0.0:8080 -t /var/www/html
+    depends_on:
+      - postgres
+    image: 'adminer:4.7.7-standalone'
     ports:
       - '8080:8080'
+volumes:
+   psqldata:
